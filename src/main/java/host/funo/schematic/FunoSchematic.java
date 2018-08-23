@@ -1,7 +1,5 @@
 package host.funo.schematic;
 
-import io.gomint.GoMint;
-import io.gomint.server.GoMintServer;
 import io.gomint.server.world.WorldAdapter;
 import io.gomint.world.World;
 import io.gomint.math.BlockPosition;
@@ -25,14 +23,12 @@ public class FunoSchematic {
      * @param position the position at which to paste the schematic
      */
     public void paste( World world, BlockPosition position ) {
-        GoMintServer server = (GoMintServer) GoMint.instance();
-
         for ( int x = 0; x < this.schematicData.width; x++ ) {
             for ( int y = 0; y < this.schematicData.height; y++ ) {
                 for ( int z = 0; z < this.schematicData.length; z++ ) {
                     int index = y * this.schematicData.width * this.schematicData.length + z * this.schematicData.width + x;
 
-                    WorldAdapter worldAdapter = (WorldAdapter) server.getWorld( world.getWorldName() );
+                    WorldAdapter worldAdapter = (WorldAdapter) world;
                     worldAdapter.setBlockId( position, -1, this.schematicData.blocks[index] );
                     worldAdapter.setBlockData( position, -1, this.schematicData.blockData[index] );
                 }
