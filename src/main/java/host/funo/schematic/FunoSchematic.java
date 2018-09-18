@@ -1,6 +1,5 @@
 package host.funo.schematic;
 
-import io.gomint.server.world.WorldAdapter;
 import io.gomint.world.World;
 import io.gomint.math.BlockPosition;
 import io.gomint.taglib.NBTStream;
@@ -27,10 +26,9 @@ public class FunoSchematic {
             for ( int y = 0; y < this.schematicData.height; y++ ) {
                 for ( int z = 0; z < this.schematicData.length; z++ ) {
                     int index = y * this.schematicData.width * this.schematicData.length + z * this.schematicData.width + x;
+                    BlockPosition pos = new BlockPosition(x + position.getX(), y + position.getY(), z + position.getZ());
 
-                    WorldAdapter worldAdapter = (WorldAdapter) world;
-                    worldAdapter.setBlockId( position, -1, this.schematicData.blocks[index] );
-                    worldAdapter.setBlockData( position, -1, this.schematicData.blockData[index] );
+                    world.getBlockAt( pos ).setType( BlockConverter.getType( this.schematicData.blocks[index] ) );
                 }
             }
         }
