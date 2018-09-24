@@ -5,7 +5,7 @@ import io.gomint.world.block.*;
 public class BlockConverter {
 
     public static Class<? extends Block> getType( byte id ) {
-        switch( id ) {
+        switch ( id ) {
             case 1:
                 return BlockStone.class;
             case 2:
@@ -14,12 +14,192 @@ public class BlockConverter {
                 return BlockDirt.class;
             case 4:
                 return BlockCobblestone.class;
+            case 5:
+                return BlockWood.class;
+            case 6:
+                return BlockSapling.class;
             case 7:
                 return BlockBedrock.class;
+            case 8:
+                return BlockFlowingWater.class;
+            case 9:
+                return BlockStationaryWater.class;
+            case 10:
+                return BlockFlowingLava.class;
+            case 11:
+                return BlockStationaryLava.class;
+            case 12:
+                return BlockSand.class;
+            case 13:
+                return BlockGravel.class;
+            case 14:
+                return BlockGoldOre.class;
+            case 15:
+                return BlockIronOre.class;
+            case 16:
+                return BlockCoalOre.class;
             case 17:
                 return BlockLog.class;
             case 18:
                 return BlockLeaves.class;
+            case 19:
+                return BlockSponge.class;
+            case 20:
+                return BlockGlass.class;
+            case 21:
+                return BlockLapisLazuliOre.class;
+            case 22:
+                return BlockLapisLazuliBlock.class;
+            case 23:
+                return BlockDispenser.class;
+            case 24:
+                return BlockSandstone.class;
+            case 25:
+                return BlockNoteblock.class;
+            case 26:
+                return BlockBed.class;
+            case 27:
+                return BlockPoweredRail.class;
+            case 28:
+                return BlockDetectorRail.class;
+            case 29:
+                return BlockStickyPiston.class;
+            case 30:
+                return BlockCobweb.class;
+            case 32:
+                return BlockDeadBush.class;
+            case 33:
+                return BlockPiston.class;
+            case 34:
+                return BlockPistonHead.class;
+            case 35:
+                return BlockWool.class;
+            case 37:
+                return BlockDandelion.class;
+            case 38:
+                return BlockFlower.class;
+            case 39:
+                return BlockBrownMushroom.class;
+            case 40:
+                return BlockRedMushroom.class;
+            case 41:
+                return BlockBlockOfGold.class;
+            case 42:
+                return BlockBlockOfIron.class;
+            case 43:
+                return BlockDoubleStoneSlab.class;
+            case 44:
+                return BlockStoneSlab.class;
+            case 45:
+                return BlockBrickBlock.class;
+            case 46:
+                return BlockTNT.class;
+            case 47:
+                return BlockBookshelf.class;
+            case 48:
+                return BlockMossyCobblestone.class;
+            case 49:
+                return BlockObsidian.class;
+            case 50:
+                return BlockTorch.class;
+            case 51:
+                return BlockFire.class;
+            case 52:
+                return BlockMobSpawner.class;
+            case 53:
+                return BlockOakWoodStairs.class;
+            case 54:
+                return BlockChest.class;
+            case 55:
+                return BlockRedstoneWire.class;
+            case 56:
+                return BlockDiamondOre.class;
+            case 57:
+                return BlockBlockOfDiamond.class;
+            case 58:
+                return BlockCraftingTable.class;
+            case 59:
+                return BlockCrops.class;
+            case 60:
+                return BlockFarmland.class;
+            case 61:
+                return BlockFurnace.class;
+            case 62:
+                return BlockBurningFurnace.class;
+            case 63:
+                return BlockSign.class;
+            case 64:
+                return BlockWoodenDoor.class;
+            case 65:
+                return BlockLadder.class;
+            case 66:
+                return BlockRail.class;
+            case 67:
+                return BlockCobblestoneStairs.class;
+            case 68:
+                return BlockWallSign.class;
+            case 69:
+                return BlockLever.class;
+            case 70:
+                return BlockStonePressurePlate.class;
+            case 71:
+                return BlockIronDoor.class;
+            case 72:
+                return BlockWoodenPressurePlate.class;
+            case 73:
+                return BlockRedstoneOre.class;
+            case 74:
+                return BlockGlowingRedstoneOre.class;
+            case 75:
+                return BlockRedstoneTorchInactive.class;
+            case 76:
+                return BlockRedstoneTorchActive.class;
+            case 77:
+                return BlockStoneButton.class;
+            case 78:
+                return BlockSnowLayer.class;
+            case 79:
+                return BlockIce.class;
+            case 80:
+                return BlockSnow.class;
+            case 81:
+                return BlockCactus.class;
+            case 82:
+                return BlockClay.class;
+            case 83:
+                return BlockSugarCane.class;
+            case 84:
+                return BlockJukebox.class;
+            case 85:
+                return BlockFence.class;
+            case 86:
+                return BlockPumpkin.class;
+            case 87:
+                return BlockNetherrack.class;
+            case 88:
+                return BlockSoulSand.class;
+            case 89:
+                return BlockGlowstone.class;
+            case 90:
+                return BlockPortal.class;
+            case 91:
+                return BlockJackOLantern.class;
+            case 92:
+                return BlockCake.class;
+            case 93:
+                return BlockRedstoneRepeaterInactive.class;
+            case 94:
+                return BlockRedstoneRepeaterActive.class;
+            case 95:
+                return BlockStainedGlass.class;
+            case 96:
+                return BlockTrapdoor.class;
+            case 98:
+                return BlockStoneBrick.class;
+            case 99:
+                return BlockBrownMushroomBlock.class;
+            case 100:
+                return BlockRedMushroomBlock.class;
         }
         return BlockAir.class;
     }
