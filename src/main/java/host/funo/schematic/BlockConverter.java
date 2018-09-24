@@ -1,7 +1,5 @@
 package host.funo.schematic;
 
-import com.sun.tools.javac.jvm.Code;
-import io.gomint.command.annotation.Parameter;
 import io.gomint.world.block.*;
 
 public class BlockConverter {
