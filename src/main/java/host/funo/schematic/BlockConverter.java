@@ -4,8 +4,9 @@ import io.gomint.world.block.*;
 
 public class BlockConverter {
 
-    public static Class<? extends Block> getType( int id ) {
-        switch ( id ) {
+    // TODO: data
+    public static Class<? extends Block> getType(int id) {
+        switch (id) {
             case 1:
                 return BlockStone.class;
             case 2:
@@ -124,8 +125,6 @@ public class BlockConverter {
                 return BlockFarmland.class;
             case 61:
                 return BlockFurnace.class;
-            case 62:
-                return BlockBurningFurnace.class;
             case 63:
                 return BlockSign.class;
             case 64:
@@ -320,12 +319,6 @@ public class BlockConverter {
                 return BlockHardenedClay.class;
             case 160:
                 return BlockStainedGlassPane.class;
-            case 161:
-                return BlockAcaciaLeaves.class;
-            case 162:
-                return BlockAcaciaWood.class;
-            case 163:
-                return BlockAcaciaWoodStairs.class;
             case 164:
                 return BlockDarkOakWoodStairs.class;
             case 165:
@@ -362,18 +355,8 @@ public class BlockConverter {
                 return BlockRedSandstoneStairs.class;
             case 181:
                 return BlockDoubleRedSandstoneSlab.class;
-            case 182:
-                return BlockRedSandstoneSlab.class;
-            case 183:
-                return BlockSpruceFenceGate.class;
-            case 184:
-                return BlockBirchFenceGate.class;
             case 185:
                 return BlockJungleFenceGate.class;
-            case 186:
-                return BlockDarkOakFenceGate.class;
-            case 187:
-                return BlockAcaciaFenceGate.class;
             case 198:
                 return BlockEndRod.class;
             case 199:
@@ -410,36 +393,6 @@ public class BlockConverter {
                 return BlockObserver.class;
             case 219:
                 return BlockUndyedShulkerBox.class;
-            case 235:
-                return BlockWhiteGlazedTerracotta.class;
-            case 236:
-                return BlockOrangeGlazedTerracotta.class;
-            case 237:
-                return BlockMagentaGlazedTerracotta.class;
-            case 238:
-                return BlockLightBlueGlazedTerracotta.class;
-            case 239:
-                return BlockYellowGlazedTerracotta.class;
-            case 240:
-                return BlockLimeGlazedTerracotta.class;
-            case 241:
-                return BlockPinkGlazedTerracotta.class;
-            case 242:
-                return BlockGrayGlazedTerracotta.class;
-            case 244:
-                return BlockCyanGlazedTerracotta.class;
-            case 245:
-                return BlockPurpleGlazedTerracotta.class;
-            case 246:
-                return BlockBlueGlazedTerracotta.class;
-            case 247:
-                return BlockBrownGlazedTerracotta.class;
-            case 248:
-                return BlockGreenGlazedTerracotta.class;
-            case 249:
-                return BlockRedGlazedTerracotta.class;
-            case 250:
-                return BlockBlackGlazedTerracotta.class;
             case 251:
                 return BlockConcrete.class;
             case 252:

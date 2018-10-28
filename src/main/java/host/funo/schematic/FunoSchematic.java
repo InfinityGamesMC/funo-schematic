@@ -11,7 +11,7 @@ import java.util.zip.GZIPInputStream;
 public class FunoSchematic {
     private SchematicData schematicData;
 
-    public FunoSchematic( SchematicData data ) {
+    public FunoSchematic(SchematicData data) {
         this.schematicData = data;
     }
 
@@ -21,14 +21,14 @@ public class FunoSchematic {
      * @param world the world in which to paste the schematic
      * @param position the position at which to paste the schematic
      */
-    public void paste( World world, BlockPosition position ) {
-        for ( int x = 0; x < this.schematicData.width; x++ ) {
-            for ( int y = 0; y < this.schematicData.height; y++ ) {
-                for ( int z = 0; z < this.schematicData.length; z++ ) {
-                    int index = y * this.schematicData.width * this.schematicData.length + z * this.schematicData.width + x;
+    public void paste(World world, BlockPosition position) {
+        for (int x = 0; x < schematicData.width; x++) {
+            for (int y = 0; y < schematicData.height; y++) {
+                for (int z = 0; z < schematicData.length; z++) {
+                    int index = y * schematicData.width * schematicData.length + z * schematicData.width + x;
                     BlockPosition pos = new BlockPosition(x + position.getX(), y + position.getY(), z + position.getZ());
 
-                    world.getBlockAt( pos ).setType( BlockConverter.getType( this.schematicData.blocks[index] ) );
+                    world.getBlockAt(pos).setType(BlockConverter.getType(schematicData.blocks[index]));
                 }
             }
         }
@@ -48,8 +48,8 @@ public class FunoSchematic {
         /**
          * @param schematic the schematic file to load
          */
-        public SchematicLoader( File schematic ) {
-            this.schematicFile = schematic;
+        public SchematicLoader(File schematic) {
+            schematicFile = schematic;
         }
 
         /**
@@ -58,11 +58,11 @@ public class FunoSchematic {
          * @return the schematic file;
          */
         public FunoSchematic load() throws Exception {
-            NBTStream nbt = new NBTStream( new GZIPInputStream( new FileInputStream( this.schematicFile ) ), ByteOrder.BIG_ENDIAN );
+            NBTStream nbt = new NBTStream(new GZIPInputStream(new FileInputStream(schematicFile)), ByteOrder.BIG_ENDIAN);
             FunoSchematic.SchematicData data = new FunoSchematic.SchematicData();
 
-            nbt.addListener( ( path, value ) -> {
-                switch( path ) {
+            nbt.addListener((path, value) -> {
+                switch(path) {
                     case "Schematic.Width":
                         data.width = (short) value;
                         break;
@@ -85,7 +85,7 @@ public class FunoSchematic {
             } );
 
             nbt.parse();
-            return new FunoSchematic( data );
+            return new FunoSchematic(data);
         }
     }
 
@@ -99,20 +99,20 @@ public class FunoSchematic {
 
         public SchematicData() {}
 
-        public SchematicData( short width, short length, short height ) {
+        public SchematicData(short width, short length, short height) {
             this.width = width;
             this.length = length;
             this.height = height;
         }
 
-        public SchematicData( short width, short length, short height, byte[] blocks ) {
+        public SchematicData(short width, short length, short height, byte[] blocks) {
             this.width = width;
             this.length = length;
             this.height = height;
             this.blocks = blocks;
         }
 
-        public SchematicData( short width, short length, short height, byte[] blocks, byte[] blockData ) {
+        public SchematicData(short width, short length, short height, byte[] blocks, byte[] blockData) {
             this.width = width;
             this.length = length;
             this.height = height;
