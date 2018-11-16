@@ -30,6 +30,6 @@ FunoSchematic schematic = new FunoSchematic(data);
 NOTE: Block ids and block data must be be at the same index in their respective byte arrays!
 
 
-### Social Networks
+## Social Networks
 [![Join the Discord](http://puu.sh/v9UB9/944431c790.png)](https://discord.gg/A4nXfEW)
 [![Twitter](http://puu.sh/v9V9H/ad70c8acf7.png)](https://twitter.com/FunoNetwork)
